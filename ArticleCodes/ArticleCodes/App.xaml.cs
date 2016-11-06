@@ -1,5 +1,8 @@
 ﻿using Prism.Unity;
 using ArticleCodes.Views;
+using Xamarin.Forms;
+using ArticleCodes.Models;
+using Microsoft.Practices.Unity;
 
 namespace ArticleCodes
 {
@@ -11,12 +14,16 @@ namespace ArticleCodes
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+            NavigationService.NavigateAsync("/NavigationPage/MainPage?title=メインページ");
         }
 
         protected override void RegisterTypes()
         {
+            Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<NotificationPage>();
+
+            Container.RegisterType<IAllPageModel, AllPageModel>(new ContainerControlledLifetimeManager());
         }
     }
 }

@@ -1,24 +1,25 @@
-﻿using Prism.Commands;
+﻿using ArticleCodes.Models;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
 
 namespace ArticleCodes.ViewModels
 {
-    public class MainPageViewModel : BindableBase, INavigationAware
+    public class MainPageViewModel : BindableBase
     {
-        private string _title;
-        public string Title
-        {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
-        }
+        private readonly IAllPageModel _page;
 
-        public MainPageViewModel()
-        {
+        public DelegateCommand OpenPageCommand { get; private set; }
 
+        public MainPageViewModel(IAllPageModel page, INavigationService navigationService)
+        {
+            _page = page; 
+            OpenPageCommand = new DelegateCommand(() => navigationService.NavigateAsync("NotificationPage"));
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)
@@ -28,8 +29,7 @@ namespace ArticleCodes.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
-            if (parameters.ContainsKey("title"))
-                Title = (string)parameters["title"] + " and Prism";
+            
         }
     }
 }
