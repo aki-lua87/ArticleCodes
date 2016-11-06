@@ -12,13 +12,9 @@ namespace ArticleCodes.Models
     class AllPageModel : BindableBase, IAllPageModel
     {
         
-        private INotificationOnAndOff _notificationOnAndOff;
+        //private INotificationOnAndOff _notificationOnAndOff;
 
-        public INotificationOnAndOff NotificationOnOff
-        {
-            get { return _notificationOnAndOff; }
-            set { SetProperty(ref _notificationOnAndOff, value); }
-        }
+        public INotificationOnAndOff NotificationOnOff{ get; set;}
 
         public AllPageModel(INotificationOnAndOff nof)
         {

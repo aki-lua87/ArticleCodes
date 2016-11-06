@@ -6,7 +6,6 @@ using Xamarin.Forms;
 using Android.App;
 using Android.Content;
 
-
 [assembly: Dependency(typeof(INotificationOnAndOff_Android))]
 namespace ArticleCodes.Droid
 {
@@ -17,8 +16,8 @@ namespace ArticleCodes.Droid
         public void NotificationOn()
         {
             var context = Forms.Context;
-            var intent = new Intent(context, typeof(MainActivity)); //タッチして遷移するとき用
-            var pendingIntent = PendingIntent.GetActivity(context, 0, intent, 0); //タッチして遷移するとき用2
+            var intent = new Intent(context, typeof(MainActivity)); 
+            var pendingIntent = PendingIntent.GetActivity(context, 0, intent, 0); 
 
             var n = new Notification.Builder(context)
                     .SetContentTitle("通知を出しました。")
