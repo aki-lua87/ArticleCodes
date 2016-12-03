@@ -12,19 +12,32 @@ namespace ArticleCodes.Models
     class AllPageModel : BindableBase, IAllPageModel
     {
         
-        //private INotificationOnAndOff _notificationOnAndOff;
-
         public INotificationOnAndOff NotificationOnOff{ get; set;}
+        public ICreateOverrayView CreateOverrayView { get; set; }
 
-        public AllPageModel(INotificationOnAndOff nof)
+        public AllPageModel(INotificationOnAndOff notificationOnAndOff, ICreateOverrayView createOverrayView)
         {
-            NotificationOnOff = nof;
+            this.NotificationOnOff = notificationOnAndOff;
+            this.CreateOverrayView = createOverrayView;
         }
 
-        public void TestMethod()
+        public void NotificationOn()
         {
-            
+            NotificationOnOff.NotificationOn();
         }
-            
+        public void NotificationOff()
+        {
+            NotificationOnOff.NotificationOff();
+        }
+
+        public void OverlayViewCreate()
+        {
+            CreateOverrayView.OverlayViewCreate();
+        }
+
+        public void OverlayViewDestroy()
+        {
+            CreateOverrayView.OverlayViewDestroy();
+        }
     }
 }

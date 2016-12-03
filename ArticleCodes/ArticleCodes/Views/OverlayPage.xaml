@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="ArticleCodes.Views.MainPage"
-             Title="MainPage">
+             x:Class="ArticleCodes.Views.OverlayPage"
+             Title="OverrayPage">
+
   <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Button Text="Go TO Notification On Off"
-            Command="{Binding NavigationToNotificationCommand}" />
-    <Button Text="Go TO Overray On Off"
-            Command="{Binding NavigationToOverlayCommand}" />
+    <Button Text="Overlay On"
+          Command="{ Binding OverlayOnCommand }"
+            />
+    <Button Text="Overlay Off"
+            Command="{Binding OverlayOffCommand}"
+              />
   </StackLayout>
+
 </ContentPage>

@@ -22,6 +22,7 @@ namespace ArticleCodes
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<NotificationPage>();
+            Container.RegisterTypeForNavigation<OverlayPage>();
 
             Container.RegisterType<IAllPageModel, AllPageModel>(new ContainerControlledLifetimeManager());
         }

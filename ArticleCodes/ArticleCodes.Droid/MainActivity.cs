@@ -8,6 +8,9 @@ using Android.Widget;
 using Android.OS;
 using Prism.Unity;
 using Microsoft.Practices.Unity;
+using ArticleCodes;
+using ArticleCodes.Models;
+using ArticleCodes.Droid;
 
 namespace ArticleCodes.Droid
 {
@@ -30,7 +33,8 @@ namespace ArticleCodes.Droid
     {
         public void RegisterTypes(IUnityContainer container)
         {
-
+            container.RegisterType<INotificationOnAndOff, NotificationOnAndOff_Android>(new ContainerControlledLifetimeManager());
+            container.RegisterType<ICreateOverrayView, CreateOverrayView_Android>(new ContainerControlledLifetimeManager());
         }
     }
 }

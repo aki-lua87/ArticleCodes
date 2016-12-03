@@ -14,12 +14,14 @@ namespace ArticleCodes.ViewModels
     {
         private readonly IAllPageModel _page;
 
-        public DelegateCommand OpenPageCommand { get; private set; }
+        public DelegateCommand NavigationToNotificationCommand { get; private set; }
+        public DelegateCommand NavigationToOverlayCommand { get; private set; }
 
         public MainPageViewModel(IAllPageModel page, INavigationService navigationService)
         {
-            _page = page; 
-            OpenPageCommand = new DelegateCommand(() => navigationService.NavigateAsync("NotificationPage"));
+            _page = page;
+            NavigationToNotificationCommand = new DelegateCommand(() => navigationService.NavigateAsync("NotificationPage"));
+            NavigationToOverlayCommand = new DelegateCommand(() => navigationService.NavigateAsync("OverlayPage"));
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)

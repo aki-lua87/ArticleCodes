@@ -15,8 +15,8 @@ namespace ArticleCodes.ViewModels
         public NotificationPageViewModel(IAllPageModel page)
         {
             _page = page;
-            OnCommand = new DelegateCommand(() => _page.NotificationOnOff.NotificationOn());
-            OffCommand = new DelegateCommand(() => _page.NotificationOnOff.NotificationOff());
+            OnCommand = new DelegateCommand(() => _page.NotificationOn());
+            OffCommand = new DelegateCommand(() => _page.NotificationOff());
 
         }
     }

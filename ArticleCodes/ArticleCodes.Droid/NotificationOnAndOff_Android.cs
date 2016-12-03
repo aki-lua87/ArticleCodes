@@ -1,15 +1,11 @@
-using ArticleCodes.Droid;
 using ArticleCodes.Models;
-using ArticleCodes.Views;
-using System.IO;
 using Xamarin.Forms;
 using Android.App;
 using Android.Content;
 
-[assembly: Dependency(typeof(INotificationOnAndOff_Android))]
 namespace ArticleCodes.Droid
 {
-    public sealed class INotificationOnAndOff_Android : INotificationOnAndOff
+    public sealed class NotificationOnAndOff_Android : INotificationOnAndOff
     {
         int id = 0;
 

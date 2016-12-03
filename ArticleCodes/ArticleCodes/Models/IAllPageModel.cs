@@ -12,6 +12,10 @@ namespace ArticleCodes.Models
     public interface IAllPageModel : INotifyPropertyChanged
     {
         INotificationOnAndOff NotificationOnOff { get; set; }
-        void TestMethod();
+        ICreateOverrayView CreateOverrayView { get; set; }
+        void NotificationOn();
+        void NotificationOff();
+        void OverlayViewCreate();
+        void OverlayViewDestroy();
     }
 }

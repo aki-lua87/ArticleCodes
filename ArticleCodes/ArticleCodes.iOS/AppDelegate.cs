@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using ArticleCodes.Models;
 using Foundation;
 using UIKit;
 using Prism.Unity;
@@ -35,7 +35,7 @@ namespace ArticleCodes.iOS
     {
         public void RegisterTypes(IUnityContainer container)
         {
-
+            container.RegisterType<INotificationOnAndOff, NotificationOnAndOff_iOS>(new ContainerControlledLifetimeManager());
         }
     }
 

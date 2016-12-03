@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using ArticleCodes.Models;
 using Prism.Unity;
 using Microsoft.Practices.Unity;
 
@@ -31,7 +32,7 @@ namespace ArticleCodes.UWP
     {
         public void RegisterTypes(IUnityContainer container)
         {
-
+            container.RegisterType<INotificationOnAndOff, NotificationOnAndOff_UWP>(new ContainerControlledLifetimeManager());
         }
     }
 
