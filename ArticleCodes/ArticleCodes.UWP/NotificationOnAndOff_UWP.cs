@@ -11,12 +11,12 @@ namespace ArticleCodes.UWP
     {
         public void NotificationOn()
         {
-            throw new NotImplementedException();
+            var a = 1 + 1;
         }
 
         public void NotificationOff()
         {
-            throw new NotImplementedException();
+            var a = 1 + 1;
         }
     }
 }

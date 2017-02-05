@@ -3,11 +3,22 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#99114514">
+    android:background="#99FF00FF">
     <Button
         android:id="@+id/closeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="閉じる"
+        android:layout_gravity="center" />
+  <TextView
+        android:id="@+id/textText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Text" />
+  <Button
+        android:id="@+id/testButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新"
         android:layout_gravity="center" />
 </LinearLayout>

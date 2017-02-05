@@ -11,6 +11,7 @@ using Microsoft.Practices.Unity;
 using ArticleCodes;
 using ArticleCodes.Models;
 using ArticleCodes.Droid;
+using ArticleCodes.Views;
 
 namespace ArticleCodes.Droid
 {
@@ -26,6 +27,8 @@ namespace ArticleCodes.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
+
+          
         }
     }
 
@@ -33,8 +36,11 @@ namespace ArticleCodes.Droid
     {
         public void RegisterTypes(IUnityContainer container)
         {
+            // container.RegisterTypeForNavigation<HidePage>();
+
             container.RegisterType<INotificationOnAndOff, NotificationOnAndOff_Android>(new ContainerControlledLifetimeManager());
             container.RegisterType<ICreateOverrayView, CreateOverrayView_Android>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IUsageStatsManager, UsageStatsManager_Android>(new ContainerControlledLifetimeManager());
         }
     }
 }

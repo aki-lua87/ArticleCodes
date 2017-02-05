@@ -16,12 +16,15 @@ namespace ArticleCodes.ViewModels
 
         public DelegateCommand NavigationToNotificationCommand { get; private set; }
         public DelegateCommand NavigationToOverlayCommand { get; private set; }
+        public DelegateCommand NavigationToSaveCommand { get; private set; }
+        public DelegateCommand NavigationToUsageCommand { get; private set; }
 
         public MainPageViewModel(IAllPageModel page, INavigationService navigationService)
         {
             _page = page;
             NavigationToNotificationCommand = new DelegateCommand(() => navigationService.NavigateAsync("NotificationPage"));
             NavigationToOverlayCommand = new DelegateCommand(() => navigationService.NavigateAsync("OverlayPage"));
+            NavigationToUsageCommand = new DelegateCommand(() => navigationService.NavigateAsync("UsageStatsManagerPage"));
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)

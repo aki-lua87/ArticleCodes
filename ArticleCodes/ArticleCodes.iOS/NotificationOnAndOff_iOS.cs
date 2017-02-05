@@ -12,12 +12,12 @@ namespace ArticleCodes.iOS
     {
         public void NotificationOff()
         {
-            
+            var a = 1 + 1;
         }
 
         public void NotificationOn()
         {
-            
+            var a = 1 + 1;
         }
     }
 }

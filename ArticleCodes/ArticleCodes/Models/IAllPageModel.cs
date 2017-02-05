@@ -13,6 +13,7 @@ namespace ArticleCodes.Models
     {
         INotificationOnAndOff NotificationOnOff { get; set; }
         ICreateOverrayView CreateOverrayView { get; set; }
+        IUsageStatsManager UsageStatsManager { get; set; }
         void NotificationOn();
         void NotificationOff();
         void OverlayViewCreate();

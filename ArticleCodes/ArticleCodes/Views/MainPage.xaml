@@ -10,5 +10,7 @@
             Command="{Binding NavigationToNotificationCommand}" />
     <Button Text="Go TO Overray On Off"
             Command="{Binding NavigationToOverlayCommand}" />
+    <Button Text="Go TO UsagePage"
+            Command="{Binding NavigationToUsageCommand}" />
   </StackLayout>
 </ContentPage>

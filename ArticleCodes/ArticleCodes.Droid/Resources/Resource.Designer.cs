@@ -26,6 +26,8 @@ namespace ArticleCodes.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLStorage.Resource.String.ApplicationName = global::ArticleCodes.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::ArticleCodes.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ArticleCodes.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2606,8 +2608,8 @@ namespace ArticleCodes.Droid
 			// aapt resource value: 0x7f070013
 			public const int showTitle = 2131165203;
 			
-			// aapt resource value: 0x7f070099
-			public const int sliding_tabs = 2131165337;
+			// aapt resource value: 0x7f07009b
+			public const int sliding_tabs = 2131165339;
 			
 			// aapt resource value: 0x7f07006c
 			public const int snackbar_action = 2131165292;
@@ -2645,6 +2647,9 @@ namespace ArticleCodes.Droid
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
+			// aapt resource value: 0x7f07009a
+			public const int testButton = 2131165338;
+			
 			// aapt resource value: 0x7f070095
 			public const int text = 2131165333;
 			
@@ -2653,6 +2658,9 @@ namespace ArticleCodes.Droid
 			
 			// aapt resource value: 0x7f07004d
 			public const int textSpacerNoButtons = 2131165261;
+			
+			// aapt resource value: 0x7f070099
+			public const int textText = 2131165337;
 			
 			// aapt resource value: 0x7f070091
 			public const int time = 2131165329;
@@ -2663,8 +2671,8 @@ namespace ArticleCodes.Droid
 			// aapt resource value: 0x7f070048
 			public const int title_template = 2131165256;
 			
-			// aapt resource value: 0x7f07009a
-			public const int toolbar = 2131165338;
+			// aapt resource value: 0x7f07009c
+			public const int toolbar = 2131165340;
 			
 			// aapt resource value: 0x7f070032
 			public const int top = 2131165234;
@@ -2954,6 +2962,12 @@ namespace ArticleCodes.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f080027
+			public const int ApplicationName = 2131230759;
+			
+			// aapt resource value: 0x7f080026
+			public const int Hello = 2131230758;
 			
 			// aapt resource value: 0x7f08000f
 			public const int abc_action_bar_home_description = 2131230735;

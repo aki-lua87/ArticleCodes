@@ -6,7 +6,7 @@
              x:Class="ArticleCodes.Views.NotificationPage"
              Title="NotificationPage">
 
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
       <Button Text="Notification On"
             Command="{ Binding OnCommand }"
             />

@@ -14,7 +14,7 @@ namespace ArticleCodes
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("/NavigationPage/MainPage?title=メインページ");
+            NavigationService.NavigateAsync("/NavigationPage/MainPage");
         }
 
         protected override void RegisterTypes()
@@ -25,6 +25,8 @@ namespace ArticleCodes
             Container.RegisterTypeForNavigation<OverlayPage>();
 
             Container.RegisterType<IAllPageModel, AllPageModel>(new ContainerControlledLifetimeManager());
+
+            Container.RegisterTypeForNavigation<UsageStatsManagerPage>();
         }
     }
 }
